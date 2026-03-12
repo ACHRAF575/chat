@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buckshot Arena (Flask Multiplayer)</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="panel">
+        <h1>Buckshot Arena</h1>
+        <p class="subtitle">2-player Buckshot Roulette inspired clone</p>
+
+        <div class="lobby">
+          <input id="nameInput" placeholder="Your name" maxlength="16" />
+          <button id="createBtn">Create Room</button>
+          <div class="join-row">
+            <input id="roomInput" placeholder="Room code" maxlength="5" />
+            <button id="joinBtn">Join Room</button>
+          </div>
+        </div>
+
+        <div id="roomInfo" class="hidden"></div>
+
+        <div id="gameControls" class="hidden">
+          <button id="startBtn">Start Match</button>
+          <button id="shootSelfBtn">Shoot Self</button>
+          <button id="shootEnemyBtn">Shoot Opponent</button>
+        </div>
+
+        <div id="stateBox"></div>
+      </div>
+
+      <canvas id="scene"></canvas>
+    </div>
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script type="module" src="/static/game.js"></script>
+  </body>
+</html>
