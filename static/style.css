@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  color: #f3f4f6;
+  background: radial-gradient(circle at top, #1f2937, #030712 55%);
+}
+
+#app {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(340px, 430px) 1fr;
+}
+
+.panel {
+  padding: 20px;
+  background: rgba(17, 24, 39, 0.8);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+h1 {
+  margin: 0;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  margin-top: 6px;
+  color: #9ca3af;
+}
+
+input,
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #111827;
+  color: #f9fafb;
+}
+
+button {
+  cursor: pointer;
+  border-color: #4f46e5;
+  background: linear-gradient(135deg, #4338ca, #7c3aed);
+}
+
+button:hover {
+  filter: brightness(1.15);
+}
+
+.join-row {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 8px;
+}
+
+#roomInfo {
+  margin-top: 14px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+#stateBox {
+  margin-top: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 220px;
+  line-height: 1.4;
+  background: rgba(0, 0, 0, 0.28);
+  white-space: pre-wrap;
+}
+
+.hidden {
+  display: none;
+}
+
+#scene {
+  width: 100%;
+  height: 100vh;
+}
+
+@media (max-width: 900px) {
+  #app {
+    grid-template-columns: 1fr;
+  }
+
+  #scene {
+    height: 50vh;
+  }
+}
